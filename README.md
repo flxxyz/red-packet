@@ -4,6 +4,12 @@
 
 采用的网络上的优秀算法出处会表面
 
+## Use
+```
+composer dump-autoload
+composer update
+```
+OK~
 - - - -
 
-> 2017.10.21 updated
+> 2017.10.22 updated
