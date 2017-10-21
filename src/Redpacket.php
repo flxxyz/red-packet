@@ -66,14 +66,14 @@ class Redpacket
     /**
      * @param int $num
      */
-    public function test($cycles = 2)
+    public function test($cycles = 1)
     {
         $common = new Common();
         $time_start = $common->time->microtime_float();
         for($i = 0; $i < $cycles; $i++) {
             $redpacket = new Redpacket($this->money, $this->number);
             $arr = $redpacket->red();
-            //$common->dump($arr);
+            $common->dump($arr);
         }
         $time_end = $common->time->microtime_float();
         $time = $time_end - $time_start;
