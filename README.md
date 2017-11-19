@@ -6,10 +6,10 @@
 
 ## Use
 ```
+composer require flxxyz/red-packet
+
 composer dump-autoload
+
 composer update
 ```
 OK~
-- - - -
-
-> 2017.10.22 updated
