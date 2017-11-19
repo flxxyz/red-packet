@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace Radpack;
 
-use App\Common\Common;
+use Radpack\Common\Common;
 
 class Redpacket
 {
@@ -10,6 +10,12 @@ class Redpacket
     public $number;
     public $money;
 
+    /**
+     * Redpacket constructor.
+     * @param int $money
+     * @param int $number
+     * @param float $min
+     */
     public function __construct($money = 0, $number = 0, $min = 0.01)
     {
         $this->number = $number;
@@ -18,6 +24,7 @@ class Redpacket
     }
 
     /**
+     * 填充红包规则
      * @return array
      */
     public function fill_red()
@@ -40,6 +47,7 @@ class Redpacket
     }
 
     /**
+     * 默认红包规则
      * @return array
      */
     public function red()
@@ -64,13 +72,14 @@ class Redpacket
     }
 
     /**
-     * @param int $num
+     * 测试
+     * @param int $cycles
      */
     public function test($cycles = 1)
     {
         $common = new Common();
         $time_start = $common->time->microtime_float();
-        for($i = 0; $i < $cycles; $i++) {
+        for ($i = 0; $i < $cycles; $i++) {
             $redpacket = new Redpacket($this->money, $this->number);
             $arr = $redpacket->red();
             $common->dump($arr);

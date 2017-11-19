@@ -1,5 +1,5 @@
 <?php
-namespace App\Common;
+namespace Radpack\Common;
 
 class Time
 {

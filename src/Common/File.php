@@ -1,5 +1,5 @@
 <?php
-namespace App\Common;
+namespace Radpack\Common;
 
 class File
 {
@@ -15,8 +15,8 @@ class File
         return file_get_contents($this->filename);
     }
 
-    public function put(array $context)
+    public function put($array = [])
     {
-        return file_put_contents($this->filename, json_encode($context));
+        return file_put_contents($this->filename, json_encode($array));
     }
 }

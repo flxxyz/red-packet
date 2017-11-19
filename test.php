@@ -1,14 +1,8 @@
 <?php
 require_once 'vendor/autoload.php';
 
-use App\{
-    Redpacket,
-    Common\Common
-};
-use Monolog\{
-    Logger,
-    Handler\StreamHandler
-};
+use Radpack\Common\Common;
+use Radpack\Redpacket;
 
 define('FILENAME', __DIR__ . '/.redpacket');
 
